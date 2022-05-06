@@ -168,7 +168,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 		Stack<BSTNode<T>> in = new Stack<BSTNode<T>>();
 		BSTNode current = root;
 		
-		while (current != null ) {
+		while (current != null || in.size() > 0) {
 			while (current != null) {
 				in.push(current);
 				current = current.leftChild;
